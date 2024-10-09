@@ -3,15 +3,288 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peddy-Adopt Your Best Friend</title>
-    <!-- cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Peddy</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind and daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "rgb(14, 122, 129)",
+              primary1: "rgba(14, 122, 129, 0.2)",
+              primary2: "rgba(14, 122, 129, 0.1)",
+              dark1: "rgb(19, 19, 19)",
+              dark2: "rgba(19, 19, 19, 0.7)",
+              dark3: "rgba(19, 19, 19, 0.6)",
+              inputbg: "rgba(255, 255, 255, 0.05)",
+              lightwhite: "rgba(255, 255, 255, 0.6)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .btn-active {
+        border-radius: 120px;
+        border: 1px solid rgb(14, 122, 129) !important;
+        background-color: rgba(14, 122, 129, 0.2) !important;
+      }
+    </style>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="./script/peddy.js"></script>
+  <body class="font-inter">
+    <!-- Navbar -->
+
+    <header class="container mx-auto">
+      <nav>
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li class="text-dark3"><a>Home</a></li>
+                <li class="text-dark3"><a>Shop</a></li>
+                <li class="text-dark3"><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="btn btn-ghost hover:bg-primary1 hover:border-primary">
+              <i class="fa-solid fa-paw text-primary text-2xl"></i>
+              <a class="text-3xl font-extrabold">Peddy</a>
+            </div>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li
+                class="text-dark3 hover:bg-primary hover:text-white rounded-lg"
+              >
+                <a>Home</a>
+              </li>
+              <li
+                class="text-dark3 hover:bg-primary hover:text-white rounded-lg"
+              >
+                <a>Shop</a>
+              </li>
+              <li
+                class="text-dark3 hover:bg-primary hover:text-white rounded-lg"
+              >
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn btn-ghost text-dark2 rounded-full border border-primary1 hover:bg-primary hover:text-white"
+              ><i class="fa-regular fa-user text-xl"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner -->
+    <main class="container mx-auto my-20">
+      <section>
+        <div class="flex flex-col items-center gap-10">
+          <h3 class="font-bold text-2xl text-dark3 text-center">
+            Bringing Families Together ❤️‍🔥
+          </h3>
+          <h1
+            class="text-center text-3xl lg:text-7xl font-extrabold text-dark1"
+          >
+            Your Path to Adoption <br />
+            Starts Here
+          </h1>
+          <p class="text-center text-dark1">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking <br />
+            at its layout. The point of using Lorem Ipsum is that it has a.
+          </p>
+          <a href="#best-friend"
+            ><button
+              class="btn text-white bg-primary hover:bg-primary1 hover:text-dark2 hover:border-primary lg:w-40"
+            >
+              View More
+            </button></a
+          >
+          <img src="./images/pet.webp" alt="" />
+        </div>
+      </section>
+      <section id="best-friend">
+        <h1 class="text-5xl font-extrabold text-dark1 text-center">
+          Adopt Your Best Friend
+        </h1>
+        <p class="text-center text-dark2 py-6">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a <br />
+          page when looking at its layout. The point of using Lorem Ipsum is
+          that it has a.
+        </p>
+        <!-- categories button -->
+        <div
+          id="category-button"
+          class="grid md:grid-cols-2 lg:grid-cols-4 gap-5"
+        ></div>
+        <div class="flex justify-between my-11">
+          <h3 class="font-extrabold text-xl text-dark1">Best Deal For you</h3>
+          <button
+            onclick="loadPetsForSort()"
+            class="btn bg-primary text-white font-bold text-lg"
+          >
+            Sort by Price
+          </button>
+        </div>
+      </section>
+      <!-- loading spin -->
+      <div id="loading-spin" class="text-center"></div>
+      <!-- All pets -->
+      <section
+        id="all-pet-container"
+        class="grid md:grid-cols-3 lg:grid-cols-4 gap-5"
+      >
+        <div
+          id="pets-container"
+          class="lg:col-span-3 md:col-span-2 grid lg:grid-cols-3 md:grid-cols-2 gap-5"
+        ></div>
+        <div class="border rounded-lg p-4">
+          <div id="image-container" class="grid grid-cols-2 h-fit gap-5"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my-modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box flex flex-col items-center">
+        <div id="modal-container"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn text-primary bg-primary2 border-primary1">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my-modal2" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box flex flex-col items-center">
+        <div id="modal-container2" class="flex flex-col items-center"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              id="btn-modal2"
+              class="btn text-primary bg-primary2 border-primary1 hidden"
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <footer class="bg-dark1 text-neutral-content p-10">
+      <div class="container mx-auto footer place-items-center">
+        <nav>
+          <h6 class="pb-6">
+            <div>
+              <i class="fa-solid fa-paw text-primary text-2xl"></i>
+              <a class="text-3xl font-extrabold text-white">Peddy</a>
+            </div>
+          </h6>
+          <a class="link link-hover"
+            >Location: av. Washington 165, NY CA 54003
+          </a>
+          <a class="link link-hover">Phone: +31 85 964 47 25</a>
+          <a class="link link-hover">Email: info@yourdomain.com</a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+          <div class="flex gap-3">
+            <img
+              class="w-8 h-8"
+              src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png"
+              alt=""
+            />
+            <img
+              class="w-8 h-8"
+              src="https://img.icons8.com/?size=48&id=cMRBi0rI3iwb&format=png"
+              alt=""
+            />
+            <img
+              class="w-8 h-8"
+              src="https://img.icons8.com/?size=48&id=19318&format=png"
+              alt=""
+            />
+            <img
+              class="w-8 h-8"
+              src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png"
+              alt=""
+            />
+          </div>
+        </nav>
+        <nav>
+          <h6 class="pb-6 font-bold text-lg">Useful Links</h6>
+          <a class="link link-hover text-lightwhite">Home</a>
+          <a class="link link-hover text-lightwhite">About us</a>
+          <a class="link link-hover text-lightwhite">Animals</a>
+          <a class="link link-hover text-lightwhite">Foundation</a>
+          <a class="link link-hover text-lightwhite">Contact</a>
+        </nav>
+        <nav>
+          <h6 class="pb-6 font-bold text-lg">Drop a Message</h6>
+          <input
+            class="p-4 rounded-lg bg-inputbg text-lightwhite"
+            type="email"
+            name=""
+            id=""
+            placeholder="Enter your email"
+          />
+          <button class="btn bg-primary text-white border-none w-full mt-2">
+            Subscribe
+          </button>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
+
